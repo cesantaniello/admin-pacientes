@@ -6,14 +6,19 @@ const Formulario = () => {
   const [email, setEmail] = useState('');
   const [fecha, setFecha] = useState('');
   const [sintomas, setSintomas] = useState('');
+
+  const [error, setError] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validar
     if (nombre.trim() === '' || propietario.trim() === '' || email.trim() === '' || fecha.trim() === '' || sintomas.trim() === '') {
       console.log('Algo salió mal');
+      setError(true);
       return;
     }
+    setError(false);
   }
   
   console.log(nombre)
@@ -27,6 +32,12 @@ const Formulario = () => {
         <form 
           onSubmit={handleSubmit}
           className="bg-white shadow-md rounded-lg py-10 px-5 mt-5 mb-10">
+            {error && (
+              <p className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md">
+                Todos los campos son obligatorios
+              </p>
+              )
+            }
           <div className="mb-5">
             <label htmlFor="mascota" className="block text-gray-700 uppercase font-bold">Nombre Mascota</label>
             <input
