@@ -8,7 +8,12 @@ const Formulario = () => {
   const [sintomas, setSintomas] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('enviando formulario');
+
+    // Validar
+    if (nombre.trim() === '' || propietario.trim() === '' || email.trim() === '' || fecha.trim() === '' || sintomas.trim() === '') {
+      console.log('Algo salió mal');
+      return;
+    }
   }
   
   console.log(nombre)
