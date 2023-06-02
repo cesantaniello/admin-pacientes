@@ -13,7 +13,8 @@ function App() {
       <div className="mt-12 md:flex">
         <Formulario 
           pacientes={pacientes} 
-          setPacientes={setPacientes} 
+          setPacientes={setPacientes}
+          paciente={paciente}
         />
         <ListadoPacientes 
           pacientes={pacientes}
