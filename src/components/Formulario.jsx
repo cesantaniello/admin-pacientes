@@ -44,14 +44,14 @@ const Formulario = ({pacientes, setPacientes}) => {
   //console.log(nombre)
   return (
     <div className="md:w-1/2 lg:w-2/5 mx-5">
-        <h2 className="font-black text-3xl text-center mb-10">Seguimiento Pacientes</h2>
-        <p className="text-lg mt-5 text-center">
+        <h2 className="font-black text-3xl text-center mb-5">Seguimiento Pacientes</h2>
+        <p className="text-xl mt-5 text-center">
           Añade pacientes y {''}
           <span className="text-indigo-600 font-bold">administralos</span>
         </p>
         <form 
           onSubmit={handleSubmit}
-          className="bg-white shadow-md rounded-lg py-10 px-5 mt-5 mb-10">
+          className="bg-white shadow-md rounded-lg py-10 px-5 mt-10 mb-10">
             {error && (
               <p className="bg-red-800 text-white text-center p-3 uppercase font-bold mb-3 rounded-md">
                 Todos los campos son obligatorios
